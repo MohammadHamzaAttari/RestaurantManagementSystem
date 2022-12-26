@@ -17,4 +17,21 @@ language of active server pages</b><br>
 By placing code within different case statements we were able to achieve crude form of encapsulation and isolation and make some sense of our code<br>
 The pattern become universal, even all these years later for a totally dead web technology you can still get google results with the term select <br>
 Case ASP classic.
+> Old Code Example
+```
+Dim requestVaue
+Select Case Request.Form("submit")
+Case ""
+    initial Get request
+    Response.Write("html")
+    'write out the rest of initial page
+Case "Create initial order"
+     Dim productName=Request.Form("txtproduct")
+     'process the form submission
+end Select     
+
+```
+Microsoft implemented it in the backend so that it could become invisible a good thing. In their 1.0 version ASP.Net, the new platform adoption of active
+server pages, code was event driven with literal event handlers for submit buttons and other controls you would put on the page by moving from VBscript
+to Visual Basic .Net or C#.
 
